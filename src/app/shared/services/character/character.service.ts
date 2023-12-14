@@ -11,19 +11,19 @@ export class CharacterService {
     constructor(private restService: RestService) {}
 
     public getAllCharacters(): Observable<ICharacterResponse> {
-        return this.restService.get<ICharacterResponse>(PATH.character);
+        return this.restService.getAll<ICharacterResponse>(PATH.character);
     }
 
     public getCharacter(id: number): Observable<ICharacter> {
-        return this.restService.get<ICharacter>(PATH.character, id);
+        return this.restService.getSingle<ICharacter>(PATH.character, id);
     }
 
     public getMultipleCharacters(
-        id: Array<number | string>
+        idList: Array<number | string>
     ): Observable<Array<ICharacter>> {
-        return this.restService.get<Array<ICharacter>>(
+        return this.restService.getMultiple<Array<ICharacter>>(
             PATH.character,
-            `${id.join()}`
+            idList
         );
     }
 }

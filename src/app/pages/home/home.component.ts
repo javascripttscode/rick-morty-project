@@ -16,12 +16,11 @@ export class HomeComponent implements OnInit {
         // this.CharacterService.getAllCharacters().subscribe(response => {
         //     console.log(response);
         // });
-
-        this.CharacterService.getMultipleCharacters([2, 1]).subscribe(
-            response => {
-                console.log(response);
-                console.log(response[1].gender);
-            }
-        );
+        // this.CharacterService.getMultipleCharacters([2, 1]).subscribe(
+        //     response => {
+        //         console.log(response);
+        //         console.log(response[1].gender);
+        //     }
+        // );
     }
 }
