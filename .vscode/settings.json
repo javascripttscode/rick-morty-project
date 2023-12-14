@@ -1,0 +1,15 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 4,
+    "editor.indentSize": 4,
+    "editor.lineHeight": 20,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "always"
+    },
+
+    "javascript.validate.enable": true,
+    "typescript.validate.enable": true,
+    "editor.showDeprecated": true,
+    "editor.guides.bracketPairs": "active"
+}
