@@ -1,0 +1,24 @@
+$icons: (
+    '1': 1rem,
+    '2': 2rem,
+    '3': 3rem,
+    '4': 4rem,
+    '5': 5rem,
+);
+
+@each $name, $value in $icons {
+    // padding
+    .br-#{$name} {
+        border-radius: #{$value};
+    }
+
+    .br-top#{$name} {
+        border-top-left-radius: #{$value};
+        border-top-right-radius: #{$value};
+    }
+
+    .br-bottom#{$name} {
+        border-bottom-left-radius: #{$value};
+        border-bottom-right-radius: #{$value};
+    }
+}

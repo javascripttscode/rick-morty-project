@@ -1,0 +1,71 @@
+$icons: (
+    '1': 1rem,
+    '2': 2rem,
+    '3': 3rem,
+    '4': 4rem,
+    '5': 5rem,
+);
+
+@each $name, $value in $icons {
+    // padding
+    .p-#{$name} {
+        padding: #{$value};
+    }
+
+    .pl-#{$name} {
+        padding-left: #{$value};
+    }
+
+    .pr-#{$name} {
+        padding-right: #{$value};
+    }
+
+    .pt-#{$name} {
+        padding-top: #{$value};
+    }
+
+    .pb-#{$name} {
+        padding-bottom: #{$value};
+    }
+
+    .py-#{$name} {
+        padding-top: #{$value};
+        padding-bottom: #{$value};
+    }
+
+    .px-#{$name} {
+        padding-left: #{$value};
+        padding-right: #{$value};
+    }
+
+    // margin
+    .m-#{$name} {
+        margin: #{$value};
+    }
+
+    .ml-#{$name} {
+        margin-left: #{$value};
+    }
+
+    .mr-#{$name} {
+        margin-right: #{$value};
+    }
+
+    .mt-#{$name} {
+        margin-top: #{$value};
+    }
+
+    .mb-#{$name} {
+        margin-bottom: #{$value};
+    }
+
+    .my-#{$name} {
+        margin-top: #{$value};
+        margin-bottom: #{$value};
+    }
+
+    .mx-#{$name} {
+        margin-right: #{$value};
+        margin-left: #{$value};
+    }
+}
