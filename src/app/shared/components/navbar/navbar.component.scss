@@ -5,8 +5,10 @@
     height: 70px;
     overflow: hidden;
     display: flex;
+    flex: 1;
     align-items: center;
     padding: 0 2rem;
+    margin: 2rem 0;
 
     &__logo {
         height: 39px;

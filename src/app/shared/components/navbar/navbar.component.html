@@ -3,16 +3,18 @@
     <nav class="navbar__navigation">
         <section class="navbar__navigation__links">
             <div class="navbar__navigation__link">
-                <a href="">Home</a>
+                <a (click)="router.navigateByUrl(routes.home)">Home</a>
             </div>
             <div class="navbar__navigation__link">
-                <a href="">Characters</a>
+                <a (click)="router.navigateByUrl(routes.characters)"
+                    >Characters</a
+                >
             </div>
             <div class="navbar__navigation__link">
-                <a href="">Locations</a>
+                <a (click)="router.navigateByUrl(routes.location)">Locations</a>
             </div>
             <div class="navbar__navigation__link">
-                <a href="">Epsodes</a>
+                <a (click)="router.navigateByUrl(routes.epsodes)">Epsodes</a>
             </div>
         </section>
     </nav>

@@ -1,2 +1,6 @@
-<navbar></navbar>
-<router-outlet></router-outlet>
+<loading *ngIf="pageService.isLoading()"></loading>
+
+<div class="container">
+    <navbar></navbar>
+    <router-outlet></router-outlet>
+</div>

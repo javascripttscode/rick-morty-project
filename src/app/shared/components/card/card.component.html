@@ -1,19 +1,25 @@
 <div class="card">
     <div class="card__image">
-        <img src="../../../assets/images/user.jpeg" alt="" />
+        <img [src]="character.image" alt="" />
     </div>
     <div class="card__content">
         <section>
-            <h2>Rick Shances</h2>
+            <h2>{{ character.name }}</h2>
             <div class="card__content__info">
                 <div class="card__content__info__status"></div>
-                <span>Alive</span>
+                <span>{{ character.status }}</span>
             </div>
         </section>
         <section class="card__content__description">
-            <span>Gender: <strong>Male</strong></span>
-            <span>Species: <strong>Human</strong></span>
-            <span>Planet: <strong>Earth</strong></span>
+            <span
+                >Gender: <strong>{{ character.gender }}</strong></span
+            >
+            <span
+                >Species: <strong>{{ character.species }}</strong></span
+            >
+            <span
+                >Planet: <strong>{{ character.location.name }}</strong></span
+            >
         </section>
     </div>
 </div>
