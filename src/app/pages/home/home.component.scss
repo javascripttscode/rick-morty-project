@@ -1,0 +1,11 @@
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 134px);
+    // border: 1px solid red;
+
+    &__image {
+        width: 50%;
+    }
+}
