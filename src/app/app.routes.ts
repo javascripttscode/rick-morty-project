@@ -28,6 +28,13 @@ export const routes: Routes = [
             ),
     },
     {
+        path: PATH_ROUTES.location,
+        loadComponent: () =>
+            import('./pages/locations/locations.component').then(
+                comp => comp.LocationComponent
+            ),
+    },
+    {
         path: PATH_ROUTES.epsodes,
         loadComponent: () =>
             import('./pages/episodes/episodes.component').then(

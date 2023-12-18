@@ -1,0 +1,25 @@
+<div class="card">
+    <div class="card__image">
+        <img src="../../../../assets/images/planet.png" alt="" />
+    </div>
+    <div class="card__content">
+        <section>
+            <h2>{{ hadleLargeNames(location.name) }}</h2>
+        </section>
+        <section class="card__content__description">
+            <span
+                >Dimension:
+                <strong>{{ hadleLargeNames(location.dimension) }}</strong></span
+            >
+            <span
+                >Type: <strong>{{ location.type }}</strong></span
+            >
+            <span
+                >Created:
+                <strong>{{
+                    location.created | date: 'MMM dd, yyyy'
+                }}</strong></span
+            >
+        </section>
+    </div>
+</div>

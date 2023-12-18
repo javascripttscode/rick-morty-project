@@ -27,6 +27,7 @@ export class EpisodesComponent implements OnInit {
         this.pageService.isLoading.set(true);
         this.episodesService.getAllEpisodes().subscribe(response => {
             this.episodesList = response.results;
+            console.log(response);
             this.pageService.isLoading.set(false);
         });
     }

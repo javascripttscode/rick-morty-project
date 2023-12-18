@@ -12,4 +12,9 @@ import { PATH_ROUTES } from '../../../app.routes';
 export class NavbarComponent {
     public router = inject(Router);
     public routes = PATH_ROUTES;
+
+    handleRouterActived(currentRouter: string) {
+        if (this.router.url.replace('/', '') == currentRouter) return true;
+        return false;
+    }
 }
