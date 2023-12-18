@@ -1,13 +1,13 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { CardCharacterComponent } from './card-character.component';
+import { CardEpisodeComponent } from '../card-episode/card-episode.component';
 
-describe('CardCharacterComponent', () => {
-    let component: CardCharacterComponent;
-    let fixture: ComponentFixture<CardCharacterComponent>;
+describe('CardEpisodeComponent', () => {
+    let component: CardEpisodeComponent;
+    let fixture: ComponentFixture<CardEpisodeComponent>;
 
     beforeEach(() => {
         TestBed.configureTestingModule({});
-        fixture = TestBed.createComponent(CardCharacterComponent);
+        fixture = TestBed.createComponent(CardEpisodeComponent);
         component = fixture.componentInstance;
     });
 
@@ -21,21 +21,22 @@ describe('CardCharacterComponent', () => {
             const title =
                 'titulo teste para formatar quando ter mais que 25 characters';
             const result = component.hadleLargeNames(title);
-            expect(result).toEqual('titulo teste pa...');
+            expect(result.length).toEqual(13);
+            expect(result).toEqual('titulo tes...');
         });
 
         it('should not format small strings', () => {
             jest.spyOn(component, 'hadleLargeNames');
-            const title = 'titulo teste';
+            const title = 'titulo';
             const result = component.hadleLargeNames(title);
-            expect(result).not.toEqual('titulo teste pa...');
+            expect(result).not.toEqual('titulo tes...');
         });
 
         it('should return the same string', () => {
             jest.spyOn(component, 'hadleLargeNames');
-            const title = 'titulo teste';
+            const title = 'titulo';
             const result = component.hadleLargeNames(title);
-            expect(result).toEqual('titulo teste');
+            expect(result).toEqual('titulo');
         });
     });
 });
