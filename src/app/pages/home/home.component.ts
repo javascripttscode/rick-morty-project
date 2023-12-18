@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { CardComponent } from '../../shared/components/card/card.component';
+import { CardCharacterComponent } from '../../shared/components/card-character/card-character.component';
 
 @Component({
     selector: 'home',
     standalone: true,
-    imports: [CardComponent],
+    imports: [CardCharacterComponent],
     templateUrl: './home.component.html',
     styleUrl: './home.component.scss',
 })

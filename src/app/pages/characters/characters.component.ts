@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CardComponent } from '../../shared/components/card/card.component';
+import { CardCharacterComponent } from '../../shared/components/card-character/card-character.component';
 import { CharacterService } from '../../shared/services/character/character.service';
 import { PageService } from '../../shared/services/page/page.service';
 import { ICharacter } from '../../shared/types/Character';
@@ -7,7 +7,7 @@ import { ICharacter } from '../../shared/types/Character';
 @Component({
     selector: 'characters',
     standalone: true,
-    imports: [CardComponent],
+    imports: [CardCharacterComponent],
     templateUrl: './characters.component.html',
     styleUrl: './characters.component.scss',
 })
@@ -26,7 +26,6 @@ export class CharactersComponent implements OnInit {
     getCurrentData() {
         this.pageService.isLoading.set(true);
         this.characterService.getAllCharacters().subscribe(response => {
-            console.log(response);
             this.charactersList = response.results;
             this.pageService.isLoading.set(false);
         });

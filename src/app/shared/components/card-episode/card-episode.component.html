@@ -1,0 +1,28 @@
+<div class="card">
+    <div class="card__image">
+        <img src="../../../../assets/images/user.jpeg" alt="" />
+    </div>
+    <div class="card__content">
+        <section>
+            <h2>{{ hadleLargeNames(episode.name) }}</h2>
+            <div class="card__content__info">
+                <span>episode: {{ episode.id }}</span>
+            </div>
+        </section>
+        <section class="card__content__description">
+            <span
+                >Created:
+                <strong>{{
+                    episode.created | date: 'MMM dd, yyyy'
+                }}</strong></span
+            >
+            <span
+                >release:
+                <strong>{{
+                    episode.air_date | date: 'MMM dd, yyyy'
+                }}</strong></span
+            >
+            <span>Characters: <strong>Clique Aqui</strong></span>
+        </section>
+    </div>
+</div>

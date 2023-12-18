@@ -27,4 +27,11 @@ export const routes: Routes = [
                 comp => comp.CharactersComponent
             ),
     },
+    {
+        path: PATH_ROUTES.epsodes,
+        loadComponent: () =>
+            import('./pages/episodes/episodes.component').then(
+                comp => comp.EpisodesComponent
+            ),
+    },
 ];
