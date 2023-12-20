@@ -10,6 +10,14 @@
     max-height: 171px;
     border-radius: 20px;
     overflow: hidden;
+    transition: transform ease 0.3s;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.01);
+        background-color: var(--green);
+        color: var(--white);
+    }
 
     &__image {
         min-height: 100%;

@@ -1,0 +1,54 @@
+<div class="modal">
+    <section class="modal__card">
+        <div class="modal__card__header">
+            <div class="modal__card__header__title">
+                <h2>{{ modalService.characterData().name }}</h2>
+                <p>status {{ modalService.characterData().status }}</p>
+            </div>
+            <span class="material-icons-round icon" (click)="closeModal()">
+                close
+            </span>
+        </div>
+        <div class="modal__card__body">
+            <section class="modal__card__body__content">
+                <div class="modal__card__body__content__image">
+                    <img [src]="modalService.characterData().image" alt="" />
+                </div>
+
+                <div class="modal__card__body__content__info">
+                    <p>
+                        <strong>location:</strong>
+                        {{ modalService.characterData().location?.name }}
+                    </p>
+                    <p>
+                        <strong>gender: </strong
+                        >{{ modalService.characterData().gender }}
+                    </p>
+                    <p>
+                        <strong>origin: </strong>
+                        {{ modalService.characterData().origin?.name }}
+                    </p>
+                    <p>
+                        <strong>species: </strong>
+                        {{ modalService.characterData().species }}
+                    </p>
+                </div>
+            </section>
+
+            <div>
+                <p style="margin-bottom: 1rem"><strong>Feats: </strong></p>
+                <div class="modal__card__episodes">
+                    @for (
+                        episode of modalService.characterData().episode;
+                        track $index
+                    ) {
+                        <span class="epidoes">
+                            episode:
+                            {{ handleEpisodeNumber(episode) }}
+                        </span>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

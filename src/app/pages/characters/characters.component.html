@@ -1,5 +1,7 @@
 <div class="character">
     @for (character of charactersList; track $index) {
-        <card-character [character]="character"></card-character>
+        <card-character
+            [character]="character"
+            (click)="openModal(character)"></card-character>
     }
 </div>

@@ -1,0 +1,98 @@
+.icon {
+    cursor: pointer;
+    opacity: 0.2;
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.modal {
+    z-index: 9;
+    background-color: #00000085;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__card {
+        width: 40%;
+        height: 80%;
+
+        background-color: var(--white);
+        border-radius: 20px;
+        padding: 2rem;
+
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__body {
+            &__content {
+                display: flex;
+                gap: 1rem;
+
+                flex: 1;
+                height: calc(100% - 4rem);
+                overflow-y: scroll;
+                padding: 2rem 0;
+
+                &__image {
+                    min-height: 140px;
+                    max-height: 140px;
+                    min-width: 140px;
+                    max-width: 140px;
+                    border-radius: 20px;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                &__info {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                }
+            }
+        }
+        &__episodes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            .epidoes {
+                border: 1px solid var(--green);
+                padding: 0 1rem;
+                border-radius: 50px;
+            }
+        }
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--green);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
