@@ -14,7 +14,7 @@ export class LoadingComponent {
         this.handleDots();
     }
 
-    handleDots() {
+    private handleDots() {
         let teste = 0;
         setInterval((): any => {
             if (this.dots().length >= 3) this.dots.set('');

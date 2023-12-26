@@ -18,4 +18,10 @@ export class CardCharacterComponent {
             return `${name.slice(0, MAX_STRING_LENGTH)}...`;
         return name;
     }
+    public handleStatus(status: string) {
+        if (status.toLowerCase() === 'dead') return 'red';
+        if (status.toLowerCase() === 'alive') return 'green';
+        if (status.toLowerCase() === 'unknown') return 'grey';
+        return 'grey';
+    }
 }

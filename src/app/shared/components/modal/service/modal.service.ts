@@ -5,6 +5,8 @@ import { ICharacter } from '../../../types/Character';
     providedIn: 'root',
 })
 export class ModalService {
-    public modalStatus = signal(true);
+    public modalStatus = signal(false);
     public characterData = signal<Partial<ICharacter>>({});
+
+    constructor() {}
 }

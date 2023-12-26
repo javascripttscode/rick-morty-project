@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { LoadingComponent } from './shared/components/loading/loading.component';
 import { ModalComponent } from './shared/components/modal/modal.component';
@@ -28,7 +28,10 @@ export class AppComponent implements OnInit {
         public modalSerivce: ModalService
     ) {}
 
-    ngOnInit(): void {
-        // this.pageService.getLoadingStatus()
+    ngOnInit(): void {}
+
+    @HostListener('document:scroll', ['$event'])
+    handleScroll() {
+        if (this.modalSerivce.modalStatus()) window.scrollTo(0, 0);
     }
 }

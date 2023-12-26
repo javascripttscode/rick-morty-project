@@ -17,6 +17,10 @@
         transform: scale(1.01);
         background-color: var(--green);
         color: var(--white);
+
+        .card__content__info__status {
+            border: 1px solid white;
+        }
     }
 
     &__image {
@@ -54,4 +58,16 @@
             }
         }
     }
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: var(--green);
+}
+
+.grey {
+    background-color: grey;
 }

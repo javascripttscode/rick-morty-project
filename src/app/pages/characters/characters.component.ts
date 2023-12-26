@@ -35,7 +35,13 @@ export class CharactersComponent implements OnInit {
     }
 
     public openModal(character: ICharacter) {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth',
+        });
         this.modalService.characterData.set(character);
         this.modalService.modalStatus.set(true);
+        return;
     }
 }
