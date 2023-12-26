@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { LoadingComponent } from './shared/components/loading/loading.component';
 import { ModalComponent } from './shared/components/modal/modal.component';
@@ -21,14 +21,12 @@ import { PageService } from './shared/services/page/page.service';
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
     title = 'rick-morty-project';
     constructor(
         public pageService: PageService,
         public modalSerivce: ModalService
     ) {}
-
-    ngOnInit(): void {}
 
     @HostListener('document:scroll', ['$event'])
     handleScroll() {
