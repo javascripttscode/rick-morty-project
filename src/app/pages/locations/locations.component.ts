@@ -5,7 +5,7 @@ import { PageService } from '../../shared/services/page/page.service';
 import { ILocation } from '../../shared/types/Location';
 
 @Component({
-    selector: 'locations',
+    selector: 'app-locations',
     standalone: true,
     imports: [CardLocationComponent],
     templateUrl: './locations.component.html',

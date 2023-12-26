@@ -5,7 +5,7 @@ import { PageService } from '../../shared/services/page/page.service';
 import { IEpisode } from '../../shared/types/Episode';
 
 @Component({
-    selector: 'characters',
+    selector: 'app-characters',
     standalone: true,
     imports: [CardEpisodeComponent],
     templateUrl: './episodes.component.html',

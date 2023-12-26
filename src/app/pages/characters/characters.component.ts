@@ -7,7 +7,7 @@ import { PageService } from '../../shared/services/page/page.service';
 import { ICharacter } from '../../shared/types/Character';
 
 @Component({
-    selector: 'characters',
+    selector: 'app-characters',
     standalone: true,
     imports: [CardCharacterComponent, ModalComponent],
     templateUrl: './characters.component.html',

@@ -1,7 +1,7 @@
 import { Component, signal } from '@angular/core';
 
 @Component({
-    selector: 'loading',
+    selector: 'app-loading',
     standalone: true,
     imports: [],
     templateUrl: './loading.component.html',
@@ -15,8 +15,7 @@ export class LoadingComponent {
     }
 
     private handleDots() {
-        let teste = 0;
-        setInterval((): any => {
+        setInterval(() => {
             if (this.dots().length >= 3) this.dots.set('');
             this.dots.update(value => value + '.');
         }, 1000);
