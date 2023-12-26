@@ -47,7 +47,8 @@
     "jest": {
         "preset": "jest-preset-angular",
         "setupFilesAfterEnv": ["<rootDir>/src/setup.jest.ts"],
-        "modulePathIgnorePatterns": ["<rootDir>/dist/", "<rootDir>/coverage/", "<rootDir>/src/app/shred/mocks"]
+        "testPathIgnorePatterns": ["<rootDir>/dist/", "<rootDir>/node_modules", "<rootDir>/src/app/shared/mocks/services"],
+        "coveragePathIgnorePatterns": ["<rootDir>/dist/", "<rootDir>/node_modules", "<rootDir>/src/app/shared/mocks/services"]
 
     }
 }
