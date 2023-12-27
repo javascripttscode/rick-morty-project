@@ -71,3 +71,9 @@
 .grey {
     background-color: grey;
 }
+
+@media screen and (max-width: 720px) {
+    .card {
+        min-width: 100%;
+    }
+}

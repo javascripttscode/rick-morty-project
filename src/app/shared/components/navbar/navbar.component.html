@@ -1,35 +1,39 @@
 <section class="navbar">
     <img class="navbar__logo" src="../../../assets/images/logo.png" alt="" />
     <nav class="navbar__navigation">
-        <section class="navbar__navigation__links">
-            <div class="navbar__navigation__link">
-                <a
-                    [class.active]="handleRouterActived(routes.home)"
-                    (click)="router.navigateByUrl(routes.home)"
-                    >Home</a
-                >
-            </div>
-            <div class="navbar__navigation__link">
-                <a
-                    [class.active]="handleRouterActived(routes.characters)"
-                    (click)="router.navigateByUrl(routes.characters)"
-                    >Characters</a
-                >
-            </div>
-            <div class="navbar__navigation__link">
-                <a
-                    [class.active]="handleRouterActived(routes.location)"
-                    (click)="router.navigateByUrl(routes.location)"
-                    >Locations</a
-                >
-            </div>
-            <div class="navbar__navigation__link">
-                <a
-                    [class.active]="handleRouterActived(routes.epsodes)"
-                    (click)="router.navigateByUrl(routes.epsodes)"
-                    >Epsodes</a
-                >
-            </div>
-        </section>
+        @if (isMobile) {
+            <div>icon</div>
+        } @else {
+            <section class="navbar__navigation__links">
+                <div class="navbar__navigation__link">
+                    <a
+                        [class.active]="handleRouterActived(routes.home)"
+                        (click)="router.navigateByUrl(routes.home)"
+                        >Home</a
+                    >
+                </div>
+                <div class="navbar__navigation__link">
+                    <a
+                        [class.active]="handleRouterActived(routes.characters)"
+                        (click)="router.navigateByUrl(routes.characters)"
+                        >Characters</a
+                    >
+                </div>
+                <div class="navbar__navigation__link">
+                    <a
+                        [class.active]="handleRouterActived(routes.location)"
+                        (click)="router.navigateByUrl(routes.location)"
+                        >Locations</a
+                    >
+                </div>
+                <div class="navbar__navigation__link">
+                    <a
+                        [class.active]="handleRouterActived(routes.epsodes)"
+                        (click)="router.navigateByUrl(routes.epsodes)"
+                        >Epsodes</a
+                    >
+                </div>
+            </section>
+        }
     </nav>
 </section>
