@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ModalComponent } from './modal.component';
+import { ModalService } from './service/modal.service';
 
 describe('ModalComponent', () => {
     let component: ModalComponent;
@@ -35,6 +36,16 @@ describe('ModalComponent', () => {
             const episodeName = 'https://rickandmortyapi.com/api/episode/2';
             const result = component.handleEpisodeNumber(episodeName);
             expect(result).not.toEqual('2');
+        });
+    });
+
+    describe('closeModal()', () => {
+        it('should close Modal', () => {
+            const modalService = TestBed.inject(ModalService);
+            modalService.modalStatus.set(true);
+            jest.spyOn(component, 'closeModal');
+            component.closeModal();
+            expect(modalService.modalStatus()).toBe(false);
         });
     });
 });

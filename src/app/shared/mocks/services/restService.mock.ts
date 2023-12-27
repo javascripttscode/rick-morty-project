@@ -10,4 +10,8 @@ export const restServiceStub = {
     getMultipleCharacters: () => {
         of({});
     },
+
+    getMultiple: () => {
+        of({});
+    },
 };

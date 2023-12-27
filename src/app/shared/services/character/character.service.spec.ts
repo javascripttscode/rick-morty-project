@@ -54,5 +54,23 @@ describe('CharacterService', () => {
                     expect(reponse).toEqual(SingleCharacter);
                 });
         });
+
+        it('should make expected calls', () => {
+            const characterId = 32;
+            jest.spyOn(service, 'getCharacter');
+            const getSingle = jest.spyOn(restServiceStub, 'getSingle');
+            service.getCharacter(characterId);
+            expect(getSingle).toHaveBeenCalledTimes(1);
+        });
+    });
+
+    describe('getMultipleCharacters()', () => {
+        it('should make expected calls', () => {
+            const characterIds = ['1', '23'];
+            jest.spyOn(service, 'getMultipleCharacters');
+            const getSingle = jest.spyOn(restServiceStub, 'getMultiple');
+            service.getMultipleCharacters(characterIds);
+            expect(getSingle).toHaveBeenCalledTimes(1);
+        });
     });
 });

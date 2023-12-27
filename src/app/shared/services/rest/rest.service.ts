@@ -9,7 +9,7 @@ import { PATH } from '../../types/path';
 export class RestService {
     constructor(private http: HttpClient) {}
 
-    private get<T>(path: PATH, id?: number | string) {
+    public get<T>(path: PATH, id?: number | string) {
         return this.http.get<T>(this.mountUrl(path, id));
     }
 
